@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find official company email addresses from public website pages.">
+  <title>MailScope — Company Email Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow glow-a"></div><div class="glow glow-b"></div>
+  <header><a class="brand" href="#"><span>✦</span> MailScope</a><nav class="mode-nav"><button class="active" data-mode="single">Single</button><button data-mode="bulk">Bulk extractor</button></nav><button id="theme" class="icon-btn" aria-label="Toggle theme">☾</button></header>
+  <main>
+    <div id="single-view">
+    <section class="hero">
+      <div class="eyebrow">SMART COMPANY DISCOVERY</div>
+      <h1>Find the right inbox.<br><em>Skip the guesswork.</em></h1>
+      <p>Scan a company’s public website for verified business emails, neatly organized by department.</p>
+    </section>
+    <section class="search-panel glass">
+      <form id="extract-form">
+        <label for="url">Company website</label>
+        <div class="search-row"><span class="search-icon">⌕</span><input id="url" type="url" placeholder="https://company.com" required autocomplete="url"><button id="submit" type="submit"><span>Extract emails</span><b>→</b></button></div>
+        <label class="check"><input id="third-party" type="checkbox"><span></span> Include unverified third-party emails</label>
+      </form>
+      <div id="progress" class="progress hidden"><div class="progress-meta"><span id="progress-text">Connecting…</span><span id="progress-number">10%</span></div><div class="track"><div id="progress-bar"></div></div></div>
+      <div id="error" class="error hidden" role="alert"></div>
+    </section>
+    <section id="results" class="hidden">
+      <div class="result-head"><div><div class="eyebrow">SCAN COMPLETE</div><h2 id="company-name">Results</h2><a id="company-url" target="_blank" rel="noopener"></a></div><div class="actions"><button data-export="copy">Copy all</button><button data-export="csv">CSV</button><button data-export="excel">Excel</button><button data-export="json">JSON</button></div></div>
+      <div id="stats" class="stats"></div><div id="empty" class="empty hidden">No email addresses were found on the public pages scanned.</div><div id="email-grid" class="email-grid"></div>
+    </section>
+    <section id="history-section" class="history glass"><div class="section-title"><h2>Recent searches</h2><button id="clear-history">Clear</button></div><div id="history-list"></div></section>
+    </div>
+    <div id="bulk-view" class="hidden">
+      <section class="hero bulk-hero"><div class="eyebrow">BULK COMPANY RESEARCH</div><h1>One file in.<br><em>Thousands of leads out.</em></h1><p>Upload a spreadsheet of company websites and receive a structured Excel report with emails, phone numbers, company details, and social profiles.</p></section>
+      <section class="bulk-panel glass">
+        <div class="bulk-steps"><div><b>1</b><span>Download the template</span></div><div><b>2</b><span>Add website URLs</span></div><div><b>3</b><span>Upload and extract</span></div></div>
+        <div class="bulk-actions"><a class="bulk-btn secondary" href="/api/bulk/sample" download>Download sample Excel</a><label class="bulk-btn primary" for="bulk-file">Upload Excel or CSV</label><input id="bulk-file" type="file" accept=".xlsx,.xls,.csv" hidden></div>
+        <div id="file-card" class="file-card hidden"><div class="file-icon">XLS</div><div><b id="file-name"></b><span id="file-meta">Reading file...</span></div><button id="remove-file" aria-label="Remove file">x</button></div>
+        <div id="bulk-error" class="error hidden"></div>
+        <div id="bulk-controls" class="bulk-controls hidden"><button id="bulk-start" class="primary-control">Start extraction</button><button id="bulk-pause">Pause</button><button id="bulk-resume" disabled>Resume</button><button id="bulk-cancel" class="danger">Cancel</button><a id="bulk-download" class="download-control disabled">Download output Excel</a></div>
+      </section>
+      <section id="bulk-dashboard" class="bulk-dashboard hidden">
+        <div class="bulk-status-head"><div><div class="eyebrow">JOB PROGRESS</div><h2 id="bulk-state">Ready to start</h2><p id="bulk-counter">0 of 0 websites</p></div><div id="bulk-percent" class="percent-ring">0%</div></div>
+        <div class="track bulk-track"><div id="bulk-progress-bar"></div></div>
+        <div id="bulk-stats" class="bulk-stats"></div>
+      </section>
+    </div>
+  </main>
+  <footer>MailScope only scans publicly available website content.</footer>
+  <script src="script.js"></script>
+</body>
+</html>

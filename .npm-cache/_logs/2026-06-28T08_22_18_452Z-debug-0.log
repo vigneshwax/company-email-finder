@@ -1,0 +1,62 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.12.1
+2 info using node@v24.15.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\vicky\OneDrive\old\Documents\Email Extractor\.npmrc
+5 silly config load:file:C:\Users\vicky\.npmrc
+6 silly config load:file:C:\Users\vicky\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install multer@1.4.5-lts.2 xlsx@0.18.5
+8 verbose argv "install" "multer@1.4.5-lts.2" "xlsx@0.18.5" "--cache" ".npm-cache" "--prefer-offline" "--no-audit" "--no-fund"
+9 verbose logfile logs-max:10 dir:C:\Users\vicky\OneDrive\old\Documents\Email Extractor\.npm-cache\_logs\2026-06-28T08_22_18_452Z-
+10 verbose logfile C:\Users\vicky\OneDrive\old\Documents\Email Extractor\.npm-cache\_logs\2026-06-28T08_22_18_452Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+13 silly idealTree buildDeps
+14 silly fetch manifest multer@1.4.5-lts.2
+15 silly packumentCache full:https://registry.npmjs.org/multer cache-miss
+16 http fetch GET https://registry.npmjs.org/multer attempt 1 failed with EACCES
+17 http fetch GET https://registry.npmjs.org/multer attempt 2 failed with EACCES
+18 http fetch GET https://registry.npmjs.org/multer attempt 3 failed with EACCES
+19 silly fetch manifest xlsx@0.18.5
+20 silly packumentCache full:https://registry.npmjs.org/xlsx cache-miss
+21 http fetch GET https://registry.npmjs.org/xlsx attempt 1 failed with EACCES
+22 http fetch GET https://registry.npmjs.org/xlsx attempt 2 failed with EACCES
+23 http fetch GET https://registry.npmjs.org/xlsx attempt 3 failed with EACCES
+24 silly placeDep ROOT multer@ OK for: company-email-finder@1.0.0 want: 1.4.5-lts.2
+25 silly placeDep ROOT xlsx@ OK for: company-email-finder@1.0.0 want: 0.18.5
+26 verbose type system
+27 verbose stack FetchError: request to https://registry.npmjs.org/multer failed, reason: 
+27 verbose stack     at ClientRequest.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\minipass-fetch\lib\index.js:130:14)
+27 verbose stack     at ClientRequest.emit (node:events:509:28)
+27 verbose stack     at emitErrorEvent (node:_http_client:109:11)
+27 verbose stack     at _destroy (node:_http_client:993:9)
+27 verbose stack     at onSocketNT (node:_http_client:1013:5)
+27 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:91:21)
+28 error code EACCES
+29 error errno EACCES
+30 error FetchError: request to https://registry.npmjs.org/multer failed, reason: 
+30 error     at ClientRequest.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\minipass-fetch\lib\index.js:130:14)
+30 error     at ClientRequest.emit (node:events:509:28)
+30 error     at emitErrorEvent (node:_http_client:109:11)
+30 error     at _destroy (node:_http_client:993:9)
+30 error     at onSocketNT (node:_http_client:1013:5)
+30 error     at process.processTicksAndRejections (node:internal/process/task_queues:91:21) {
+30 error   code: 'EACCES',
+30 error   errno: 'EACCES',
+30 error   type: 'system',
+30 error   requiredBy: '.'
+30 error }
+31 error
+31 error The operation was rejected by your operating system.
+31 error It's possible that the file was already in use (by a text editor or antivirus), or that you lack permissions to access it.
+31 error
+31 error If you believe this might be a permissions issue, please double-check the permissions of the file and its containing directories, or try running the command again as root/Administrator.
+32 silly unfinished npm timer reify 1782634940970
+33 silly unfinished npm timer reify:loadTrees 1782634940976
+34 verbose cwd C:\Users\vicky\OneDrive\old\Documents\Email Extractor
+35 verbose os Windows_NT 10.0.26220
+36 verbose node v24.15.0
+37 verbose npm  v11.12.1
+38 verbose exit 1
+39 verbose code 1
+40 error A complete log of this run can be found in: C:\Users\vicky\OneDrive\old\Documents\Email Extractor\.npm-cache\_logs\2026-06-28T08_22_18_452Z-debug-0.log
